@@ -2,11 +2,10 @@
 // числа (неопределённое кол-во) и возвращает их сумму (rest).
 
 export function sum(...nums: Array<number>): number {
-    // console.log(nums)
-    //...здесь пишем код.
-    // В return стоит "заглушка", чтоб typescript не ругался
-    return 123
+    return nums.reduce((acc, curr) => acc + curr, 0)
 }
+
+console.log(sum(5, 4, 5, 6, 7, 8))
 
 // 2. Функция getTriangleType принимает три параметра:
 // длины сторон треугольника.
