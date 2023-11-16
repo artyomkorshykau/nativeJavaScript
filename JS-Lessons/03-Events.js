@@ -37,3 +37,10 @@ a.addEventListener('click', (event) => {
     event.preventDefault()
     alert('Link was pressed')
 })
+
+// Этапы события при нажатии на элемент
+
+// Погружение
+// Захват, Capturing
+// Всплытие
+
