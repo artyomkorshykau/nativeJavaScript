@@ -74,3 +74,50 @@ function sum(arr) {
 // sum(range(1, 10, 2))
 
 
+const obj = {
+    value: 1,
+    rest: {
+        value: 2,
+        rest: {
+            value: 3,
+            rest: null
+        }
+    }
+}
+
+const newMass = []
+const getValues = (obj) => {
+
+    for (let values in obj) {
+        if (typeof obj[values] === 'object') {
+            getValues(obj[values])
+            // console.log(1)
+        } else {
+            newMass.push(obj[values])
+        }
+    }
+    return newMass
+}
+
+// console.log(getValues(obj))
+
+class Vector {
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+    }
+
+    plus(vector) {
+        return new Vector(this.x += vector.x, this.y += vector.y)
+    }
+
+    minus(vector) {
+        return new Vector(this.x -= vector.x, this.y -= vector.y)
+    }
+
+    get length() {
+        return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2))
+    }
+}
+
+console.log(new Vector(3, 4).length);
