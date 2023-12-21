@@ -208,31 +208,176 @@
 //
 // console.log(random(5, 10))
 
-function ucFirst(str) {
-    return str[0].toUpperCase() + str.slice(1)
-}
+// function ucFirst(str) {
+//     return str[0].toUpperCase() + str.slice(1)
+// }
+//
+// console.log(ucFirst('вася'))
+//
+// function checkSpam(str) {
+//     let toLowerCase = str.toLowerCase()
+//     return toLowerCase.includes('viagra') || toLowerCase.includes('xxx');
+//
+// }
+//
+// console.log(checkSpam('byu'))
+//
+// function truncate(str, maxlength) {
+//     if (str.length > maxlength) {
+//         return str.slice(0, maxlength) + '...'
+//     }
+//     return str
+// }
+//
+// console.log(truncate("Всем привет!", 20))
+//
+// function extractCurrencyValue(str) {
+//     return +str.slice(1)
+// }
+//
+// console.log(extractCurrencyValue('$120'))
+//
+// let arr = [1, 2, 3]
+// arr[10] = 10
+// console.log(arr.length)
 
-console.log(ucFirst('вася'))
+// function camelize(str) {
+//     return str
+//         .split('-')
+//         .map((el, index) => index === 0 ? el : el[0].toUpperCase() + el.slice(1))
+//         .join('')
+// }
+//
+// console.log(camelize("list-style-image"))
+//
+// let arr = [5, 2, 1, -10, 8]
+//
+// function filterRange(arr, a, b) {
+//     return arr.filter(el => el >= a && el <= b)
+// }
+//
+// console.log(filterRange(arr, 1, 4))
+//
+// function filterRangeInPlace(arr, a, b) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < a || arr[i] > b) {
+//             arr.splice(i, 1)
+//             i--
+//         }
+//     }
+// }
 
-function checkSpam(str) {
-    let toLowerCase = str.toLowerCase()
-    return toLowerCase.includes('viagra') || toLowerCase.includes('xxx');
+// filterRangeInPlace(arr, 1, 4)
+// console.log(arr)
 
-}
+// console.log(arr.sort((a, b) => b - a))
 
-console.log(checkSpam('byu'))
+// let arr = ["HTML", "JavaScript", "CSS"];
+//
+// function copySorted(arr) {
+//     return [...arr].sort()
+// }
+//
+// console.log(copySorted(arr))
+// console.log(arr)
 
-function truncate(str, maxlength) {
-    if (str.length > maxlength) {
-        return str.slice(0, maxlength) + '...'
-    }
-    return str
-}
+// function Calculator() {
+//
+//     this.methods = {
+//         '+': (a, b) => a + b,
+//         '-': (a, b) => a - b,
+//     }
+//     this.calculate = function (str) {
+//         let split = str.split(' '),
+//             a = +split[0],
+//             op = split[1],
+//             b = +split[2]
+//         return this.methods[op](a, b)
+//     }
+//     this.addMethod = function (name, func) {
+//         this.methods[name] = func
+//     }
+// }
+//
+//
+// const calc = new Calculator()
+// console.log(calc.addMethod('*', (a, b) => a * b))
+// console.log(calc.addMethod('/', (a, b) => a / b))
+// console.log(calc.calculate('2 / 2'))
+//
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+//
+// let users = [ vasya, petya, masha ];
+//
+// users = users.map(el => el.name)
+// console.log(users)
 
-console.log(truncate("Всем привет!", 20))
+// let vasya = {name: "Вася", surname: "Пупкин", id: 1};
+// let petya = {name: "Петя", surname: "Иванов", id: 2};
+// let masha = {name: "Маша", surname: "Петрова", id: 3};
+//
+// let users = [vasya, petya, masha];
+//
+// newUsers = users.map(el => ({fullName: `${el.name} ${el.surname}`, id: el.id}))
+// console.log(newUsers)
 
-function extractCurrencyValue(str) {
-    return +str.slice(1)
-}
+// let vasya = {name: "Вася", age: 25};
+// let petya = {name: "Петя", age: 30};
+// let masha = {name: "Маша", age: 28};
+//
+// let arr = [vasya, petya, masha];
+//
+// function sortByAge(arr) {
+//     return arr.sort((a, b) => a.age - b.age)
+// }
+//
+// sortByAge(arr)
+//
+// console.log(arr[0].name)
+// console.log(arr[1].name)
+// console.log(arr[2].name)
 
-console.log(extractCurrencyValue('$120'))
+// let vasya = {name: "Вася", age: 25};
+// let petya = {name: "Петя", age: 30};
+// let masha = {name: "Маша", age: 29};
+//
+// let arr = [vasya, petya, masha];
+//
+// function getAverageAge(users) {
+//     return users.reduce((acc, el) => {
+//         return acc + el.age
+//     }, 0) / users.length
+// }
+//
+// console.log(getAverageAge(arr))
+//
+// let strings = ["кришна", "кришна", "харе", "харе",
+//     "харе", "харе", "кришна", "кришна", ":-O"
+// ];
+//
+// function unique(arr) {
+//     // return arr.reduce((acc, el, index) => {
+//     //     acc[el] = el
+//     //     return acc
+//     // }, [])
+//     return [...new Set(arr)]
+// }
+//
+// console.log(unique(strings))
+//
+// let users = [
+//     {id: 'john', name: "John Smith", age: 20},
+//     {id: 'ann', name: "Ann Smith", age: 24},
+//     {id: 'pete', name: "Pete Peterson", age: 31},
+// ];
+//
+// function groupById(arr) {
+//     return arr.reduce((acc, el) => {
+//         acc[el.id] = el
+//         return acc
+//     }, {})
+// }
+//
+// console.log(groupById(users))
