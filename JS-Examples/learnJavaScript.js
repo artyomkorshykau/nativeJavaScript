@@ -381,3 +381,90 @@
 // }
 //
 // console.log(groupById(users))
+
+// let arrayLike = {
+//     0: "Hello",
+//     1: "World",
+//     length: 2
+// };
+//
+// console.log(Array.from(arrayLike))
+
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+
+// function unique(arr) {
+//     return [...new Set(arr)]
+// }
+//
+// console.log(unique(values))
+//
+// let map = new Map();
+//
+// map.set("name", "John");
+//
+// let keys = map.keys();
+//
+// console.log(Array.from(keys))
+
+// let obj = {name: 'Artyom'}
+//
+// let copyObj = obj
+// obj = null
+//
+// console.log(copyObj)
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250
+// };
+//
+// function sumSalaries(salaries) {
+//     return Object.entries(salaries). reduce((acc, el) => acc + el[1], 0)
+// }
+//
+// console.log(sumSalaries(salaries))
+//
+// function count(obj) {
+//     return Object.keys(obj).length
+// }
+//
+// console.log(count(salaries))
+//
+// let guest = "Jane";
+// let admin = "Pete";
+//
+// [guest, admin] = [admin, guest]
+//
+// console.log(guest, admin)
+//
+// let user = {
+//     name: "John",
+//     years: 30
+// };
+//
+// let {name, age = user.years, isAdmin = false} = user
+//
+// console.log(name, age, isAdmin)
+
+// let salaries = {
+//     "John": 100,
+//     "Pete": 300,
+//     "Mary": 250,
+// };
+//
+// function topSalary(salaries) {
+//     let max = 0
+//     let nameMax = null
+//     for(let [name, value] of Object.entries(salaries)) {
+//         max < value ? max = value : max
+//         nameMax = name
+//     }
+//     return nameMax
+//
+// }
+//
+// console.log(topSalary(salaries))
