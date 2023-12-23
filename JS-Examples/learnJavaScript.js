@@ -468,3 +468,20 @@
 // }
 //
 // console.log(topSalary(salaries))
+
+// console.log(new Date(2012, 1, 20, 3, 12))
+//
+// function getWeekDay(date) {
+//     let days = ['1', '2', '3', '4', '5', '6', '7'];
+//
+//     return days[date.getDay() - 1]
+// }
+//
+// console.log(getWeekDay(new Date(2012, 0, 3)))
+//
+// let user = {
+//     name: "Василий Иванович",
+//     age: 35
+// };
+//
+// console.log(JSON.parse(JSON.stringify(user)))
