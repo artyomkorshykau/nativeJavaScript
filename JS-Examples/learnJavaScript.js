@@ -485,3 +485,112 @@
 // };
 //
 // console.log(JSON.parse(JSON.stringify(user)))
+
+// function sumTo(n) {
+//
+//     let res = 0
+//     for (let i = 0; i <= n; i++) {
+//         res += i
+//     }
+//     return res
+//     // return n === 1 ? 1 : (n + sumTo(n - 1))
+// }
+//
+// console.log(sumTo(100))
+// console.log(sumTo(100000))
+
+
+let list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+
+// function printList(list) {
+//     if(list.next) return printList(list.next)
+//     console.log(list.value)
+//
+//     // let arr = []
+//     // let temp = list
+//     // while (temp) {
+//     //     arr.push(temp.value)
+//     //     temp = temp.next
+//     // }
+//     //
+//     // for (let i = arr.length - 1; i >= 0; i--) {
+//     //     console.log(arr[i])
+//     // }
+// }
+//
+// console.log(printList(list))
+
+// function test() {
+//     console.log(...arguments)
+// }
+//
+// console.log(test(1, 2, 3, 4, 5))
+
+// let x = 1
+//
+// function test() {
+//     console.log(x)
+//
+//     let x = 2
+// }
+//
+// console.log(test())
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+// function inBetween(a, b) {
+//     return function (value) {
+//         return value >= a && value <= b
+//     }
+// }
+//
+// console.log(arr.filter(inBetween(1, 5)))
+
+// function inArray(array) {
+//     return function (el) {
+//         array.forEach(f => el === f ? console.log(f) : false)
+//     }
+// }
+//
+// console.log(arr.filter(inArray([1, 2, 5, 10])))
+
+// function printNumbers(from, to) {
+//     let timerId = setInterval(() => {
+//         if (from === to) {
+//             clearInterval(timerId)
+//         }
+//         console.log(from++)
+//     }, 1000)
+// }
+//
+// printNumbers(1, 10)
+
+function* generateSequence(start, end) {
+    for (let i = start; i <= end; i++) yield i
+}
+
+function* generatePasswordCode() {
+    yield* generateSequence(48, 57)
+    yield* generateSequence(65, 90)
+    yield* generateSequence(97, 122)
+}
+
+let password = ''
+
+for (let code of generatePasswordCode()) {
+    password += String.fromCharCode(code)
+}
+
+console.log(password)
