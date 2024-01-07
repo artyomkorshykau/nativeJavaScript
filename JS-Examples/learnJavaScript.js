@@ -577,20 +577,31 @@ let arr = [1, 2, 3, 4, 5, 6, 7];
 //
 // printNumbers(1, 10)
 
-function* generateSequence(start, end) {
-    for (let i = start; i <= end; i++) yield i
-}
+// function* generateSequence(start, end) {
+//     for (let i = start; i <= end; i++) yield i
+// }
+//
+// function* generatePasswordCode() {
+//     yield* generateSequence(48, 57)
+//     yield* generateSequence(65, 90)
+//     yield* generateSequence(97, 122)
+// }
+//
+// let password = ''
+//
+// for (let code of generatePasswordCode()) {
+//     password += String.fromCharCode(code)
+// }
+//
+// console.log(password)
 
-function* generatePasswordCode() {
-    yield* generateSequence(48, 57)
-    yield* generateSequence(65, 90)
-    yield* generateSequence(97, 122)
-}
+// fetch('https://api.github.com/users/artyomkorshykau')
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data); // Вывод полученных данных в консоль
+//         // Далее вы можете обрабатывать полученные данные по своему усмотрению
+//     })
+//     .catch(error => {
+//         console.log('Произошла ошибка при выполнении запроса:', error);
+//     });
 
-let password = ''
-
-for (let code of generatePasswordCode()) {
-    password += String.fromCharCode(code)
-}
-
-console.log(password)
