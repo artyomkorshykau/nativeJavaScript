@@ -1,3 +1,5 @@
+"use strict";
+
 // function sumary(a) {
 //     console.log(a)
 //     return function (b) {
@@ -126,3 +128,89 @@
 //
 // console.log(recursion(tree))
 // console.log(tree)
+
+// -----------------------------CUSTOM MAP METHOD-----------------------------
+// let arr = ['apple', 'banana', 'orange']
+//
+// Array.prototype.myMap = function (callback) {
+//     const res = []
+//     for (let i = 0; i < this.length; i++) {
+//         res[i] = callback(this[i], i, this)
+//     }
+//     return res
+// }
+//
+// const res = arr.myMap((el) => el.toUpperCase())
+//
+// console.log(res)
+
+// function palindrome(word) {
+//     word = word.toLowerCase()
+//     return word === word.split('').reverse().join('')
+// }
+//
+// console.log(palindrome('APPPA'))
+//
+// function someFn(str) {
+//     const stack = []
+//
+//     const brackets = {
+//         '(': ')',
+//         '{': '}',
+//         '[': ']'
+//     }
+//
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === '(' || str[i] === '{' || str[i] === '[') {
+//             stack.push(str[i])
+//         }
+//     }
+//     for (let i = 0; i < str.length; i++) {
+//         const bracket = str[i]
+//         if (bracket === ')' || bracket === '}' || bracket === ']') {
+//             if (stack.length) {
+//
+//             }
+//         }
+//     }
+//     return stack
+// }
+//
+// console.log(someFn('()'))
+
+
+// const originArr = (arr) => {
+//     const obj = {}
+//     const res = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if (!(arr[i] in obj)) {
+//             obj[arr[i]] = 1
+//         } else {
+//             obj[arr[i]] += 1
+//         }
+//     }
+//
+//     Object.keys(obj).forEach(el => {
+//             if (obj[el] === 1) {
+//                 res.push(el)
+//             }
+//         }
+//     )
+//
+//     return res
+// }
+//
+// console.log(originArr([1, 1, 2, 3, 3, 4, 5, 1, 3]))
+
+// function User(name, age) {
+//     this.name = name
+//     this.age = age
+//
+//     return this
+// }
+//
+// console.log(new User('Artyom', 26))
+
+
+
