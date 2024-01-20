@@ -151,32 +151,14 @@
 //
 // console.log(palindrome('APPPA'))
 //
+
 // function someFn(str) {
-//     const stack = []
+//     let leftBrackets = 0
+//     let rightBrackets = 0
 //
-//     const brackets = {
-//         '(': ')',
-//         '{': '}',
-//         '[': ']'
-//     }
-//
-//     for (let i = 0; i < str.length; i++) {
-//         if (str[i] === '(' || str[i] === '{' || str[i] === '[') {
-//             stack.push(str[i])
-//         }
-//     }
-//     for (let i = 0; i < str.length; i++) {
-//         const bracket = str[i]
-//         if (bracket === ')' || bracket === '}' || bracket === ']') {
-//             if (stack.length) {
-//
-//             }
-//         }
-//     }
-//     return stack
 // }
 //
-// console.log(someFn('()'))
+// console.log(someFn('()[{dg(((f}'))
 
 
 // const originArr = (arr) => {
@@ -211,6 +193,30 @@
 // }
 //
 // console.log(new User('Artyom', 26))
+
+
+// const fetchURL = function (url) {
+//     console.log(`fetching ${url}... ${this.name}`)
+// }
+//
+// const user = {
+//     name: 'Artyom'
+// }
+//
+// function debounce(callback, delay) {
+//     let timer
+//     return (...args) => {
+//         clearTimeout(timer)
+//         timer = setTimeout(() => callback(...args), delay)
+//     }
+// }
+//
+// const fetching = debounce(fetchURL.bind(user), 3000)
+//
+// fetching(1)
+// fetching(2)
+// fetching(3)
+
 
 
 
