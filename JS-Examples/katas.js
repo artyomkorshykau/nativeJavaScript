@@ -142,13 +142,13 @@
 //
 // console.log(two(minus(one())))
 
-const concerts = {
-    'Москва': new Date('2023-04-01'),
-    'Минск': new Date('2023-04-02'),
-    'Берлин': new Date('2024-04-03'),
-    'Париж': new Date('2024-04-04'),
-    'Речица': new Date('2023-04-05')
-}
+// const concerts = {
+//     'Москва': new Date('2023-04-01'),
+//     'Минск': new Date('2023-04-02'),
+//     'Берлин': new Date('2024-04-03'),
+//     'Париж': new Date('2024-04-04'),
+//     'Речица': new Date('2023-04-05')
+// }
 
 // function concertList(list) {
 //     // let res = []
@@ -182,3 +182,41 @@ const concerts = {
 // }
 //
 // console.log(withoutRepeat(arr))
+
+// function findOutlier(integers) {
+//
+//     let pos = []
+//     let neg = []
+//
+//     for (let i = 0; i < integers.length; i++) {
+//         if (integers[i] % 2 === 0) {
+//             pos.push(integers[i])
+//         } else {
+//             neg.push(integers[i])
+//         }
+//     }
+//     return pos.length === 1 ? pos[0] : neg[0]
+// }
+//
+// console.log(findOutlier([1, 1, 0, 1, 1])) // 0
+// console.log(findOutlier([2, 4, 6, 8, 3])) // 3
+
+// function alphabetPosition(text) {
+//     let alphavite = 'abcdefghijklmnopqrstuvwxyz'
+//     let obj = {}
+//     let res = ''
+//
+//     for (let i = 0; i < alphavite.length; i++) {
+//         obj[alphavite[i]] = i + 1
+//     }
+//     for (let i = 0; i < text.length; i++) {
+//         for (let key in obj) {
+//             if (text[i].toLowerCase() === key) {
+//                 res +=  `${obj[key]} `
+//             }
+//         }
+//     }
+//     return res.trim()
+// }
+//
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
