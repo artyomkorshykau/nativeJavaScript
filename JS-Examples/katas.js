@@ -220,3 +220,52 @@
 // }
 //
 // console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+
+// function persistence(num) {
+//     let arr = Array.from(String(num), Number)
+//     let count = 0
+//
+//     if (Array.from(String(num), Number).length === 1) {
+//         return 0
+//     }
+//
+//     while (arr.length !== 1) {
+//         count++
+//         arr = Array.from(String(arr.reduce((acc, el) => acc * el)), Number)
+//     }
+//     return count
+// }
+//
+// console.log(persistence(999)) // 4
+// console.log(persistence(39)) // 3
+
+// function uniqueInOrder(iterable) {
+//     let arr
+//     Array.isArray(iterable) ? arr = iterable : arr = iterable.split('')
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === arr[i + 1]) {
+//             delete arr[i]
+//         }
+//     }
+//
+//     return arr.filter(el => el !== 'undefined')
+// }
+//
+// console.log(uniqueInOrder('AAAABBBCCDAABBB')) //['A', 'B', 'C', 'D', 'A', 'B']
+// console.log(uniqueInOrder([1, 2, 2, 3, 3])) //[1, 2, 3]
+
+// function isPangram(string) {
+//
+//     let str = string.replace(/[^a-z]/gi, '');
+//     let stringArr = []
+//
+//     for (let i = 0; i < str.length; i++) {
+//         stringArr[i] = str[i].toLowerCase()
+//     }
+//
+//     return [...new Set(stringArr.sort())].length === 26
+// }
+//
+// console.log(isPangram("The quick brown fox jumps over the lazy dog.")) // true
+// console.log(isPangram("This is not a pangram.")) // false
